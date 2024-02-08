@@ -1,0 +1,815 @@
+﻿BUILDINGS={
+	s:STATE_IVORY_COAST={
+		region_state:FRA={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:BLE={
+		}
+		region_state:KNG={
+		}
+		region_state:AYI={
+		}
+	}
+	s:STATE_WINDWARD_COAST={
+		region_state:KBD={
+		}
+		region_state:BLE={
+		}
+		region_state:KRU={
+		}
+	}
+	s:STATE_SENEGAL={
+		region_state:FRA={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:JLF={
+		}
+		region_state:CAY={
+		}
+		region_state:FTR={
+		}
+	}
+	s:STATE_GAMBIA={
+		region_state:POR={
+			create_building={
+				building="building_rice_farm"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:GBR={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_rice_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
+		region_state:SRR={
+		}
+		region_state:BND={
+		}
+		region_state:KBU={
+		}
+	}
+	s:STATE_SIERRA_LEONE={
+		region_state:SIL={
+
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+	}
+	s:STATE_VOLTA={
+		region_state:MOS={
+		}
+		region_state:KNG={
+		}
+	}
+	s:STATE_LIBERIA={
+		region_state:LIB={
+
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+	}
+	s:STATE_HAUSALAND={
+		region_state:SOK={
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+		}
+	}
+	s:STATE_BENIN={
+		region_state:BEN={
+		}
+	}
+	s:STATE_YORUBA_STATES={
+		region_state:OYO={
+		}
+	}
+	s:STATE_NIGER_DELTA={
+		region_state:IBO={
+		}
+	}
+	s:STATE_OUTER_HAUSALAND={
+		region_state:HAU={
+		}
+		region_state:BOR={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+		}
+	}
+	s:STATE_BORNU={
+		region_state:BOR={
+		}
+	}
+	s:STATE_NIGERIA={
+		region_state:SOK={
+		}
+	}
+	s:STATE_EAST_HAUSALAND={
+		region_state:SOK={
+		}
+	}
+	s:STATE_GUINEA={
+		region_state:MDK={
+		}
+		region_state:SSU={
+		}
+		region_state:FTJ={
+		}
+	}
+	s:STATE_GHANA={
+		region_state:GBR={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:NET={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:ASH={
+	
+		}
+	}
+	s:STATE_TOGO={
+		region_state:DEN={
+			create_building={
+				building="building_coffee_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+		region_state:ASH={	
+		}
+		region_state:EWE={
+		}
+	}
+	s:STATE_DAHOMEY={
+		region_state:DAH={
+
+		}
+	}
+	s:STATE_LINDI={
+		region_state:HHE={
+		}
+		region_state:GGO={
+		}
+		region_state:SNG={
+		}
+	}
+	s:STATE_ZANZIBAR={
+		region_state:OMA={
+			create_building={
+				building="building_coffee_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+	}
+	s:STATE_TANGANYIKA={
+		region_state:NYM={
+		}
+		region_state:MSI={
+		}
+		region_state:KRG={
+		
+		}
+		region_state:RWD={	
+		
+		}
+		region_state:BRD={
+		
+		}
+	}
+	s:STATE_KENYA={
+		region_state:KKY={
+		}
+	}
+	s:STATE_RIFT_VALLEY={
+		region_state:MSI={
+		}
+		region_state:LUO={
+		}
+		region_state:TRK={
+		}
+	}
+	s:STATE_OROMIA={
+		region_state:HAR={
+
+		}
+		region_state:SHW={
+			create_building={
+				building="building_logging_camp"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+			}				
+
+		}
+	}
+	s:STATE_AMHARA={
+		region_state:WLG={
+
+		}
+		region_state:SHW={
+
+		}
+		region_state:BRN={
+
+		}
+		region_state:KFA={
+
+		}
+		region_state:SDM={
+
+		}
+	}
+	s:STATE_GONDER={
+		region_state:BGM={		
+
+		}
+		region_state:WLO={
+
+		}
+		region_state:AWS={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+
+		}
+		region_state:TGR={				
+			create_building={
+				building="building_sheep_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+
+		}
+		region_state:GJM={
+
+		}
+	}
+	s:STATE_KAZEMBE={
+		region_state:BMB={
+		}
+		region_state:KZM={
+		}
+	}
+	s:STATE_SOMALILAND={
+		region_state:ISQ={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+
+		}
+		region_state:WSG={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+
+		}
+		region_state:GLD={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+
+		}
+		region_state:MJT={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+
+		}
+	}
+	s:STATE_SOUTH_MADAGASCAR={
+		region_state:MAD={
+
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+		}
+	}
+	s:STATE_NORTH_MADAGASCAR={
+		region_state:MAD={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+
+		}
+	}
+	s:STATE_UGANDA={
+		region_state:BUG={
+
+		}
+		region_state:BNY={
+
+		}
+		region_state:ANK={
+
+		}
+		region_state:ACH={
+
+		}
+	}
+	s:STATE_EQUATORIA={
+		region_state:DNK={
+		}
+		region_state:NUE={
+		}
+		region_state:DFT={
+		}
+		region_state:TPS={
+		}
+	}
+	s:STATE_MOCAMBIQUE={
+		region_state:POR={
+			create_building={
+				building="building_sugar_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_tea_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_logging_camp"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+		}
+	}
+	s:STATE_WADDAI={
+		region_state:WAD={
+
+		}
+		region_state:BGI={
+	
+		}
+	}
+	s:STATE_NORTH_CAMEROON={
+		region_state:SOK={
+
+		}
+	}
+	s:STATE_SOUTH_CAMEROON={
+		region_state:SPA={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:FNG={
+		}
+		region_state:DLA={
+		}
+	}
+	s:STATE_UBANGI_SHARI={
+		region_state:DAK={
+		}
+		region_state:ZND={
+		}
+	}
+	s:STATE_CONGO={
+		region_state:BOB={
+		}
+		region_state:LNG={
+		}
+		region_state:TKE={
+		}
+	}
+	s:STATE_CONGO_ORIENTALE={
+		region_state:MNB={
+		}
+		region_state:ZND={
+		}
+		region_state:LGA={
+		}
+		region_state:HMB={
+		}
+		region_state:LBA={
+		}
+	}
+	s:STATE_KASAI={
+		region_state:KBA={
+		}
+		region_state:LBA={
+		}
+	}
+	s:STATE_BAS_CONGO={
+		region_state:KON={
+
+		}
+		region_state:YKA={
+		}
+	}
+	s:STATE_EQUATEUR={
+		region_state:BNG={
+		}
+		region_state:BOB={
+		}
+	}
+	s:STATE_NORTH_ANGOLA={
+		region_state:POR={
+			create_building={
+				building="building_coffee_plantation"
+				level=4
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+	}
+	s:STATE_SOUTH_ANGOLA={
+		region_state:POR={
+			create_building={
+				building="building_coffee_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_millet_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
+		region_state:OVM={
+		}
+	}
+	s:STATE_EAST_ANGOLA={
+		region_state:CHK={
+		}
+		region_state:LND={
+		}
+		region_state:KSN={
+		}
+		region_state:LZO={
+		}
+	}
+	s:STATE_KATANGA={
+		region_state:KZM={
+		}
+		region_state:LND={
+		}
+		region_state:LBA={
+		}
+	}
+	s:STATE_GABON={
+		region_state:FNG={
+		}
+		region_state:LNG={
+		}
+	}
+	s:STATE_ZAMBIA={
+		region_state:LZO={
+		}
+		region_state:BMB={
+		}
+	}
+	s:STATE_ZAMBEZIA={
+		region_state:POR={
+		}
+		region_state:MSK={
+		}
+		region_state:MNC={
+		}
+	}
+	s:STATE_ZAMBEZI={
+		region_state:MTB={
+		}
+		region_state:MSH={
+		}
+		region_state:MNC={
+		}
+	}
+	s:STATE_NAMAQUALAND={
+		region_state:NAM={
+		}
+	}
+	s:STATE_HEREROLAND={
+		region_state:HRO={
+		}
+	}
+	s:STATE_ZULULAND={
+		region_state:ZUL={
+			create_building={
+				building="building_cattle_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+		}
+		region_state:BST={
+		}
+	}
+	s:STATE_VRYSTAAT={
+		region_state:ORA={
+			create_building={
+				building="building_cattle_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+			}		
+		}
+	}
+	s:STATE_TRANSVAAL={
+		region_state:TRN={	
+			create_building={
+				building="building_cattle_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+			}
+		
+		}
+	}
+	s:STATE_EASTERN_CAPE={
+		region_state:SAF={
+			create_building={
+				building="building_cattle_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+			}
+
+		}
+	}
+	s:STATE_CAPE_COLONY={
+		region_state:SAF={
+			create_building={
+				building="building_wheat_farm"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_vineyards" "pm_tools_disabled" "pm_simple_farming" }
+			}
+			create_building={
+				building="building_sheep_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_fishing_trawlers" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+	}
+	s:STATE_NORTHERN_CAPE={
+		region_state:SAF={
+			create_building={
+				building="building_sheep_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+			}
+		}
+		region_state:TSW={
+		}
+		region_state:WBL={
+		}
+	}
+	s:STATE_BOTSWANA={
+		region_state:TSW={
+		}
+		region_state:LZO={
+		}
+	}
+	s:STATE_LOURENCO_MARQUES={
+		region_state:POR={
+			create_building={
+				building="building_millet_farm"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_sugar_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned" }
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
