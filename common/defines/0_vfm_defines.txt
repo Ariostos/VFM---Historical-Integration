@@ -1,0 +1,321 @@
+﻿NGame = {
+}
+
+NJominiMap = {
+}
+
+NAI = {
+	STRATEGY_RANDOM_FACTOR = 10.0
+	CHANGE_STRATEGY_INCREASE_WEEKLY_CHANCE = 40.0
+	CHANGE_STRATEGY_DIPLOMATIC_STATE_GAINED = 15
+	CHANGE_STRATEGY_DIPLOMATIC_STATE_LOST = 15
+	COUNTRY_GOAL_STRATEGIC_UPDATE_COUNT = 10
+	COUNTRY_GOAL_ADJUSTMENT_UPDATE_COUNT = 75
+	BASE_AGGRESSION = 0.6
+	DIPLO_PROPOSAL_TO_PLAYER_COOLDOWN_MONTHS = 60
+	DIPLO_PROPOSAL_LIKELY_NON_ACCEPTED_COOLDOWN_MONTHS = 60
+	GOAL_BEFRIEND_RECONCILE_FACTOR = 100
+	RECRUITABLE_COMMANDER_RANDOM_FACTOR = 1.5
+	START_DIPLO_PLAY_RANDOM_FACTOR = 1.2
+	WAR_GOAL_RANDOM_FACTOR = 1.5
+	TECH_RANDOM_FACTOR = 1.5
+	TECH_REMAINING_COST_FACTOR = 0.03
+	DEFEND_STATE_CAPITAL_WEIGHT = 50
+	INVADE_STATE_CAPITAL_WEIGHT = 50
+	NAVAL_INVASION_COOLDOWN_DAYS = 30
+	FRONT_IMPORTANCE_MIN_SCORE = 20
+	COLONY_ARABLE_LAND_WEIGHT = 15
+	COLONY_ADJACENT_WEIGHT_MULT = 20
+	COLONY_RANDOM_FACTOR = 1.5
+	MONEY_SPENDING_RANDOM_FACTOR = 1.5
+	PRODUCTION_BUILDING_RANDOM_FACTOR = 5
+	VIOLATE_SOVEREIGNTY_RANDOM_FACTOR = 1.5
+	
+	MONEY_SPENDING_SUPPLY_NETWORK_DESIRED_THRESHOLD = 1.15 # If supply network is worse than this, AI wants to improve it
+
+	MONEY_SPENDING_CONSTRUCTION_CRITICAL_THRESHOLD = 0.88 # If actual-to-wanted number of construction sector buildings is below this, AI considers it very important to get more
+	
+	MONEY_SPENDING_WANTED_CONVOYS_PER_BARRACKS_LEVEL = 4 # If the AI has fewer free convoys than this per level of barracks, it wants more ports
+	MONEY_SPENDING_BUREAUCRACY_CRITICAL_THRESHOLD = 0.95 # If bureaucracy income to expenses is worse than this, AI considers it critical to improve it
+	MONEY_SPENDING_BUREAUCRACY_DESIRED_THRESHOLD = 1.08 # If bureaucracy income to expenses is worse than this, AI wants to improve it
+	MONEY_SPENDING_BUREAUCRACY_EXCESSIVE_THRESHOLD = 1.16 # If bureaucracy income to expenses is better than this, AI will not improve it
+	MONEY_SPENDING_INFRASTRUCTURE_CRITICAL_THRESHOLD = 0.92 # If infra production to usage is worse than this, AI considers it critical to improve it
+	MONEY_SPENDING_INFRASTRUCTURE_DESIRED_THRESHOLD = 1.15 # If infra production to usage is worse than this, AI wants to improve it
+	
+	PRODUCTION_BUILDING_FREE_INFRASTRUCTURE_TARGET_WHEN_LACKING_WORKFORCE = 2 # When lacking workforce, the AI will stop building in the state once available infrastructure is this or less
+	
+	PRODUCTION_METHOD_PROFIT_FACTOR = 1.75 #1.0 Per pound of profit the produced goods would generate
+	PRODUCTION_METHOD_DEFICIT_FACTOR = 1.4 #1.5 Per pound of deficit the produced goods would generate (multiplies a negative value)
+	PRODUCTION_METHOD_CHANCE_TO_CHANGE = 0.2 # Chance that the AI will consider changing a production method when evaluating methods
+	
+	PRODUCTION_METHOD_INCREASE_OUTPUT_PENALTY_FACTOR = 0.2 #0.01 # Multiply method score by this if we're increasing the building's output penalties
+	
+	PRODUCTION_BUILDING_INCREASE_SHORTAGE_MULT = 0.2 #0.01 Multiply score by this if we're increasing the state region's shortages
+	
+	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 15 # If no wargoals are being enforced on either side
+	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION = 2 # For each month the war goes on add this to the acceptance for a white peace
+	
+	TRADE_ROUTE_MIN_MARKET_SHARE = 0.05 # If the AI is junior in a customs union and has less than this market share in a market, don't make any trade routes
+	TRADE_ROUTE_MIN_ACCEPTABLE_PRODUCTIVITY = 2.4 #3 # If a potential trade route would result in lower productivity than this, don't create it unless it's to resolve a shortage
+	TRADE_ROUTE_MIN_WANTED_RELATIVE_VOLUME = 0.07 #0.1 # If a trade route won't account for at least this fraction of buy/sell orders in the market, don't create it
+	TRADE_ROUTE_MIN_VALUE_TO_IGNORE_VOLUME_CHECK = 500 # If a trade route is trading at least this much base value worth of goods, ignore the relative check above
+	TRADE_ROUTE_ACCEPTABLE_SPENDING = 0.004 #0.002 AI will not spend more BUR than this on trade routes (scaled by weekly GDP)
+	TRADE_ROUTE_ACCEPTABLE_SPENDING_MINIMUM = 85 #20 If TRADE_ROUTE_ACCEPTABLE_SPENDING is less than this, this is used instead (so even small countries can do some trading)
+	
+	TRADE_ROUTE_REPLACE_THRESHOLD = 3.5 #5.0 If there is a sufficiently better new trade route (old route score x this), remove the old one
+	TRADE_ROUTE_SUPPLY_NETWORK_STRENGTH_THRESHOLD = 0.9 #1.0 If supply network strength less than this, don't make new trade routes
+	TRADE_ROUTE_DURATION_FACTOR = 5.0 #10.0 # AI multiplies value of a route by ( 1 + this ) at COMPETITIVENESS_DURATION_BONUS_MAX_MONTHS (scales linearly up to this value at a lower duration)
+	
+	# Below data is used for naval invasions:
+	NAVAL_INVASION_RANDOM_FACTOR = 0.4 								# The higher this is, the more random AI naval invasion theater selection will be
+	NAVAL_INVASION_COOLDOWN_DAYS = 20 								# After launching a naval invasion, the AI will wait at least this long before launching another
+	NAVAL_INVASION_MIN_SCORE = 10									# AI won't bother launching naval invasions against theaters with a lower total state score than this
+	NAVAL_INVASION_MAX_LOCAL_FRONT_SCORE = 200						# Don't launch a naval invasion if there is a local front of at least this total score for the general
+	
+	MAX_INSTITUTION_SPENDING = 0.025 #0.02 AI will not spend more BUR than this on institutions (scaled by weekly GDP)
+	INSTITUTION_SPENDING_INCREASE_SPENDING_RATIO = 1.0 # If current + additional institution spending is equal or less than max spending * this, try to improve some institutions
+	INSTITUTION_SPENDING_DECREASE_SPENDING_RATIO = 2.1 # 2.0 If current institution spending is at least max spending * this, try to degrade some institutions 
+}
+
+NCountry = {
+	COUNTRY_FORMATION_CANDIDATE_MIN_RANK = 2
+}
+
+NPolitics = {
+	LEADER_IDEOLOGY_RANDOM_FACTOR = 1.5
+	POP_IG_RANDOM_FACTOR = 0.3
+	MAX_POP_FRACTION_LEAVE_IG = 0.1
+	
+	SECESSION_WEEKLY_CHANCE_EXCESS_DIV = 10			# Excess turmoil is divided by this and used to increase chance for secession movements
+	MIN_POP_SIZE_TO_SECEDE = 50000						# Num pops (including dependents) needed for a secession movement to start
+	SECESSION_STATE_CUTOFF_PERCENT = 0.33				# Required pop percentage in State to be egligble (oi) for secession
+	SECESSION_COOLDOWN_YEARS = 5
+}
+
+NEconomy = {
+	
+	DEFAULT_MIN_HIRING_RATE = 0.03 				# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
+	DEFAULT_MAX_HIRING_RATE = 0.1 				# Default weekly max hiring limit applied in a building per profession as a ratio of full employment
+	HIRING_RANGE_WEEKLY_CHANGE = 0.01 			# Weekly hiring range of a building is decreased or increased by this based on whether it is failing to hire at its current rate or not
+	EMPLOYMENT_PROPORTIONALITY_LIMIT = 0.1		# A building cannot have a difference of ratio of full employment between any two professions greater than this limit
+	MINIMUM_EMPLOYEES = 10						# If a building has fewer employees than this, it will always attempt to hire
+	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
+	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
+	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
+	BUILDING_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 0.5  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1 	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 8		# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 3 # Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
+	
+	STARTING_WAGE_RATE_MULTIPLIER = 2.0
+	
+	TRADE_ROUTE_AUTO_INCREASE_ACCEPTABLE_REVENUE_DIFFERENCE = 1.15 #1.1 Multiply revenue of new trade route level by this for the purpose of considering whether it's OK to auto-increase level (means that trade routes can level up even when slightly decreasing overall revenue)
+	TRADE_ROUTE_AUTO_INCREASE_VERY_LOW_PRODUCTIVITY_THRESHOLD = 2.5 #3 If trade route's productivity is below this, always automatically decrease its level (regardless of total revenue)
+	TRADE_ROUTE_AUTO_INCREASE_LOW_PRODUCTIVITY_THRESHOLD = 4.5 #6 If trade route's productivity would drop below this, don't automatically increase its level (regardless of total revenue)
+	TRADE_ROUTE_AUTO_INCREASE_HIGH_PRODUCTIVITY_THRESHOLD = 8 #10 If trade route's productivity is above this, it's always fine to automatically increase its level (regardless of total revenue)
+	TRADE_ROUTE_AUTO_REDUCTION_ACCEPTABLE_REVENUE_DIFFERENCE = 1.2 # Multiply revenue of current trade route level by this for the purpose of considering whether we should auto-decrease level (means that trade routes won't level down just for the purpose of a small revenue increase)
+} 
+
+NMilitary = {
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.0005
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.005
+	USE_TRAVEL_NETWORK = no
+}
+
+NDiplomacy = {
+	WAR_GOAL_INFAMY_CONQUER_STATE = 3.0 #6.0
+	WAR_GOAL_INFAMY_RETURN_STATE = 0.75 #1.5
+	WAR_GOAL_INFAMY_TAKE_TREATY_PORT = 1.0 #2.0
+	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 2.0 #4.0
+	WAR_GOAL_INFAMY_MAKE_TRIBUTARY = 2.0 #4.0
+	WAR_GOAL_INFAMY_REDUCE_AUTONOMY = 1.25 #2.5
+	WAR_GOAL_INFAMY_TRANSFER_SUBJECT = 1.25 #2.5
+	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 3.0 #6.0
+	WAR_GOAL_INFAMY_UNIFICATION = 0.25 #0.5
+	WAR_GOAL_INFAMY_REGIME_CHANGE = 0.75 #1.5
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_RETURN_STATE = 5
+	
+	WAR_GOAL_CONTAIN_THREAT_YEARS_SINCE_CONQUEST = 25
+	
+	BASE_YEARLY_INFAMY_DECAY_RATE = 3.5 	# Decay rate of infamy per year
+	
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02 # For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 10 # Infamy population multiplier can't be higher than this for each state affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 40 # Infamy population multiplier can't be higher than this, regardless of number of states affected
+	WAR_GOAL_INFAMY_HOMELAND_FACTOR = -0.5 # Infamy is adjusted by this if the states taken/puppeted etc are Homelands of the aggressor
+	WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR = -0.75 # Infamy is adjusted by this if the states taken/puppeted etc are unincorporated
+	WAR_GOAL_INFAMY_OWN_SUBJECT_MULT = 0.67 # Infamy is multiplied by this for wargoals targeting your own subject
+}
+
+NPops = {
+	LOW_POP_THRESHOLD = 4500					# If a state has less than this amount of pops per arable land, apply the low pop modifier
+	HIGH_POP_THRESHOLD = 4500					# If a state has more than this amount of pops per arable land, apply the high pop modifier
+
+	MIGRATION_PULL_EMPTY_STATE = 100						# If a state has no pops at all, give it a huge migration pull
+	MIGRATION_PULL_FROM_LIVING_STANDARD = 1					# Migration pull from each point of average living standard in target state	
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 1			# Migration pull is increased by for each 10k available non subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 5		# Migration pull from available non subsistence jobs cannot exceed this
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75		# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND = 0.025		# Migration pull is increased by for each 10k available subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX = 10		# Migration pull from available subsistence jobs cannot exceed this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 1			# Migration pull is reduced by this for each 10k unemployed pops
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 100		# Migration pull reduction from unemployment cannot exceed this
+
+	# The below factors are applied *after* migration pull threshold checks, so they only impact how large a share of migration a state gets
+	MIGRATION_PULL_MULT_FROM_CULTURE_TARGET = 20.0			# Migration pull multiplied by this from target state being a cultural migration target
+	MIGRATION_PULL_MULT_FROM_CULTURE_TARGET_ADJACENCY = 3.0	# Migration pull multiplied by this from target state being next to a cultural migration target
+	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 0.25		# Migration pull multiplier increased by this if pop is moving from discrimination to no discrimination (not applied to mass migration targets)
+	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.25				# Migration pull  multiplier increased by this if pop is moving to cultural homelands (not applied to mass migration targets)
+	MIGRATION_PULL_MULT_FROM_NO_TRADE_ROUTE = 0.75			# Migration pull multiplier penalty for not having trade route to migration target
+
+    CONVERSION_RATE = 0.001						# Percentage of pops who will Convert into a different Religion each month, if eligible (halved from vanilla)
+	RADICALS_MONTHLY_FROM_DISCRIMINATION = 0.006 #0.005 # Scales by literacy
+	
+	CULTURAL_MIGRATION_BASE = 0.08								# Base amount of a pop that wants to move due to mass migration
+	CULTURAL_MIGRATION_FROM_RADICALS = 0.1						# At 100% radicals, this fraction of the pop wants to mass migrate
+	MIGRATION_UNEMPLOYMENT_MULT = 10.0							# Amount of migration from SoL is increased by this when a pop is unemployed
+	MIGRATION_MAX_POP_AMOUNT = 5000								# No more than this amount of a pop can migrate each week
+	MIGRATION_MAX_PER_STATE_BASE = 500							# No more than this amount of people can move from or to a state in a single week (base)	
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 5					# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.001		#0.005 Max emigration per week is clamped to this fraction of a state's population
+	MIGRATION_MAX_PER_STATE_CULTURAL_EMIGRATION_MULT = 2.5		#10 Weekly emigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_CULTURAL_IMMIGRATION_MULT = 20.0		#30 Weekly immigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.01	# The amount of unemployed workers in a state * this value is added to how many people can move from it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.005	# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_CULTURAL_EMIGRATION_MULT = 5.0		# Weekly emigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_CULTURAL_IMMIGRATION_MULT = 15.0		# Weekly immigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	
+	# General factors for how many pops will migrate
+	MIGRATION_PULL_HIGH_THRESHOLD = 1.1						#	State must have a migration pull of at least market average * this to get economic immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.5							# State must have a migration pull of less or equal than market average * this to get full amount of emigration
+	ECONOMIC_MIGRATION_BASE = 0.02								# Base amount of a pop that wants to move for economic reasons
+	ECONOMIC_MIGRATION_FROM_SOL_DIFFERENCE = 0.001			# Each point of difference of pop SoL to the market's average SoL makes this fraction of the pop want to economically migrate (in %)
+	ECONOMIC_MIGRATION_STATE_POPULATION_THRESHOLD = 250000				# States with less pops than this have reduced economic emigration numbers to avoid total depopulation
+	CULTURAL_MIGRATION_BASE = 0.1								# Base amount of a pop that wants to move due to mass migration
+	CULTURAL_MIGRATION_FROM_RADICALS = 0.10						# At 100% radicals, this fraction of the pop wants to mass migrate
+	MIGRATION_UNEMPLOYMENT_MULT = 2.0							# Amount of migration from SoL is increased by this when a pop is unemployed
+	MIGRATION_MIN_STATE_POPS = 100000							# A state with less pops than this will not get emigration
+	MIGRATION_MIN_POP_AMOUNT = 1								# No less than this amount of a pop can migrate each week (if any migration at all should happen)
+	MIGRATION_MAX_POP_AMOUNT = 5000							# No more than this amount of a pop can migrate each week
+	MIGRATION_MAX_PER_STATE_BASE = 500							# No more than this amount of people can move from or to a state in a single week (base)	
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 2					# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.0004	# Max emigration per week is clamped to this fraction of a state's population
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.002	# The amount of unemployed workers in a state * this value is added to how many people can move from it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.002	# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_CULTURAL_EMIGRATION_MULT = 5.0		# Weekly emigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_CULTURAL_IMMIGRATION_MULT = 50.0		# Weekly immigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_AVERAGE_ATTRACTION_EMIGRATION_MULT = 0.25			# States with an average migration attraction gets this multiplier to emigrants	
+	
+	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.01			# Must have at least this much turmoil in cultural homelands to create a migration target
+	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 1000000		# A country must have at least this many possible migrants to trigger a mass migration
+	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.1			# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 100			# A state must have at least this much arable land to be a mass migration target
+	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.7		# A state must have at least this much market access to their market to be a mass migration target or origin state
+	MASS_MIGRATION_SPAWN_CHANCE = 10 					# Per week for each potential mass migration, scales with turmoil (1 = 1%)
+	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.1 # Chance increases by this for each point of SoL below 10 for a culture in a country
+	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 0.1 	# Chance increases by this for each point of SoL below 5 for a culture in a country (added on top of struggling factor)
+	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.1	# The higher this is, the more random the selection of mass migration country targets will be
+	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5		# The higher this is, the more random the selection of mass migration state targets in the target country will be
+	MASS_MIGRATION_DURATION_MONTHS = 12					# How long does a mass migration last in months
+	MASS_MIGRATION_COOLDOWN_MONTHS = 36					# How many months before the same culture can mass migrate from a country again
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 2	# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.1		# Mass migration target score is divided by ( 1 + this * number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY )
+	
+	COLONIZATION_RIGHTS_GROWTH_MULTIPLIER = 2.0			# Colonial growth AND max colonial growth are multiplied by this if you have colonization rights
+	COLONIAL_GROWTH_BASE_FACTOR = 0.00001				# Colonial growth generated by a state is ( total pops / 1000 ) * this * modifier from institution
+	MIN_BASE_COLONIAL_GROWTH = 0.05						# Country base colonial growth from population cannot be lower than this
+	MAX_BASE_COLONIAL_GROWTH = 0.1						# Country base colonial growth from population cannot be higher than this
+	MAX_COLONIAL_GROWTH = 0.05							# Colonies can grow by this much at most per day 
+	
+	INDIVIDUALS_TAXED_PER_TAX_CAPACITY = 15000			# How many pops can be taxed efficiently for each tax capacity
+}
+
+NPops = {
+	## Birthrate
+	POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE = 0
+	POP_GROWTH_BIRTHRATE_TRANSITION_SLOPE = -0.000184
+	POP_GROWTH_BIRTHRATE_TRANSITION_INTERCEPT = 0.0061
+
+	## Mortality
+	POP_GROWTH_MORTALITY_STARVING_SLOPE = -0.0001
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_SLOPE = -0.00023
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_INTERCEPT = 0.00579
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_SLOPE = -0.00011
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_INTERCEPT = 0.00425
+
+	## Base Values
+	POP_GROWTH_MIN_BIRTHRATE = 0.0015					# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_BIRTHRATE = 0.005					# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+	POP_GROWTH_MIN_MORTALITY = 0.0015					# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_MORTALITY = 0.005				# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+	## SoL Thresholds
+	POP_GROWTH_EQUILIBRIUM_SOL = 6	# Equilibrium is pops stop starving and where growth first becomes positive
+	POP_GROWTH_TRANSITION_SOL = 6		# Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+	POP_GROWTH_MAX_SOL = 13					# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+	POP_GROWTH_STABLE_SOL = 25				# Stable is where birthrate and mortality stop changing and hit their minimum values
+}
+### End Pop Growth Constant defines
+
+NEvents = {
+}
+
+NPolitics = {
+	INCOHERENCE_FACTOR = 2								# The amount to multiply the approval value with to get an incoherence score for legitimacy
+	INCOHERENCE_FROM_SECONDARY_PARTY_MEMBERS = 0.5		# The amount to multiply the approval value with if the interest group is in a party but is not the party whip
+	LEGITIMACY_PENALTY_FOR_EACH_EXCESS_ENTITY = 100		# How much Legitimacy is lost for each group in government above the allowance determined by country_legitimacy_govt_size_add
+	STARTUP_MIN_LEGITIMACY_IG_BARRIER = 60 # Min legitimacy when on startup we allow to remove IGs from goverment that decrease legitimacy
+}
+
+NTechnology = {
+	TECH_AHEAD_OF_TIME_PENALTY_FACTOR = 0.5	# For every tech in a previous era not already researched in this category, take this multiple of the cost as an additional penalty (multiplied by number of eras between the techs)
+}
+
+NCharacters = {
+	RULER_MIN_AGE_FOR_HEIR = 20 				# Before this age, don't randomly generate heirs for rulers
+	RULER_AGE_FOR_HEIR_CHANCE_BOOST = 30 		# A year after this age start boosting chance of heir generation
+	RULER_HEIR_GENERATION_CHANCE = 0.000125 	# Per day
+	RULER_HEIR_CHANCE_BOOST_SCALE = -0.00000833	# Added to RULER_HEIR_CHANCE_BOOST for each year after RULER_AGE_FOR_HEIR_CHANCE_BOOST
+}
+
+NCommands = {
+}
+
+NCountry = {
+	MOVE_CAPITAL_COOLDOWN_YEARS = 20
+}
+
+NEconomy = {
+	COUNTRY_GDP_MODIFIER_MAX_MULTIPLIER = 100000		# The country_gdp modifier multiplier cannot be higher than this
+	# Pollution Impact = (GeneratedPollution (StateRegion) / (DIVISOR_BASE + DIVISOR_ARABLE_LAND_MULT * SQRT(ArableLand (State Region)))/POLLUTION_MAX
+	POLLUTION_TARGET_DIVISOR_BASE = 50					# Base value to divide total pollution generation by for calculating state region pollution target level
+	POLLUTION_TARGET_DIVISOR_ARABLE_LAND_MULT = 1		# Amount per arable land to add to pollution divisor
+	POLLUTION_CHANGE_SPEED = 0.255						# Each day, pollution in state region changes by this amount towards target
+	POLLUTION_MAX = 255
+	POLLUTION_SPREAD_TO_NEIGHBOR = 0.25					# Adjacent state regions always have at least this much of their neighbor's pollution level
+	
+	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 4 # Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
+	COMPETITIVENESS_TRADE_AGREEMENT_MULT = 1.0	# Competiveness is multiplied by ( 1 + this ) if trading country and market controller have a trade agreement
+}
+
+NBattle = {
+	CASUALTY_MAJORITY_CULTURE_WEIGHT = 1
+	SURVIVAL_RATE = 0.8
+	CASUALTY_ROLL_MIN = 10
+	CASUALTY_ROLL_MAX = 100
+	MIN_DEPENDENTS_PER_ROLL = 25
+}
+
+NWar = {
+}
+
+NText = {
+}
+
+NDebug = {
+}
+
