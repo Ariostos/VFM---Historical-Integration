@@ -1,0 +1,145 @@
+﻿pm_wooden_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	
+	is_default = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2 #cost 1700
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fabric_add = 20 #400
+			goods_input_wood_add = 65 #1300
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 50
+			building_employment_laborers_add = 4450
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}	
+	}
+}
+
+pm_iron_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		bessemer_process
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 4.5 #cost 2200  paying 500 for +2.5 construction
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 40 #800
+			goods_input_fabric_add = 10 #200
+			goods_input_steel_add = 20 #1000
+			goods_input_tools_add = 5 #200
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 100
+			building_employment_machinists_add = 200
+			building_employment_laborers_add = 4200
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}	
+	}
+}
+
+pm_steel_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 6.5 #cost 2700 paying 500 for +2 construction
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 20 #400
+			goods_input_fabric_add = 5 #100
+			goods_input_steel_add = 30 #1600
+			goods_input_glass_add = 5 #200
+			goods_input_explosives_add = 4 #200
+			goods_input_tools_add = 5 #200
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 200
+			building_employment_machinists_add = 500
+			building_employment_laborers_add = 3800
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}	
+	}
+}
+
+pm_arc_welded_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
+
+	unlocking_technologies = {
+		arc_welding
+	}
+		
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 8 #cost 3200 paying 500 for +1.5 construction
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 10 #200
+			goods_input_fabric_add = 5 #100
+			goods_input_steel_add = 45 #1800
+			goods_input_glass_add = 10 #400
+			goods_input_explosives_add = 4 #200
+			goods_input_tools_add = 5 #200
+			goods_input_electricity_add = 10 #300
+		} 
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_engineers_add = 500
+			building_employment_machinists_add = 1000
+			building_employment_laborers_add = 3000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}	
+	}
+	
+	required_input_goods = electricity
+}

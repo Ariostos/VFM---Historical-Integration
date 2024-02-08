@@ -1,0 +1,170 @@
+﻿
+pm_home_workshops_no_building_subsistence_farms = {
+	texture = "gfx/interface/icons/production_method_icons/no_home_workshops.dds"
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	building_modifiers = { # 45
+		unscaled = {
+			goods_output_grain_add = 0.25
+			goods_output_fabric_add = 0.2
+			goods_output_wood_add = 0.2
+		}
+	}				
+}		
+
+pm_home_workshops_building_subsistence_farms = {
+	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+	disallowing_laws = {
+		law_collectivized_agriculture
+	}
+	
+	building_modifiers = {
+		workforce_scaled = { # 51
+			goods_output_clothes_add = 0.1
+			goods_output_fabric_add = 0.2
+			goods_output_furniture_add = 0.05
+			goods_output_liquor_add = 0.05
+		}
+	}
+}
+
+pm_serfdom_no = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+	unlocking_laws = {
+		law_tenant_farmers
+		law_commercialized_agriculture
+		law_homesteading
+		law_collectivized_agriculture
+	}
+	disallowing_laws = {
+		law_serfdom
+	}
+	
+	building_modifiers = {					
+		unscaled = {
+			building_subsistence_output_add = 3.5
+			building_workforce_shares_add = 0.5
+		}
+	}
+}
+
+pm_serfdom = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	disallowing_laws = {
+		law_tenant_farmers
+		law_commercialized_agriculture
+		law_homesteading
+		law_collectivized_agriculture
+	}
+	unlocking_laws = {
+		law_serfdom
+	}			
+	building_modifiers = {
+		unscaled = {
+			building_subsistence_output_add = 3.7
+		}
+	}
+	state_modifiers = {
+		unscaled  = { 
+			state_pop_qualifications_mult = -0.25
+		}	
+	}
+}		
+
+pm_privately_owned_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	disallowing_laws = {
+		law_collectivized_agriculture
+		law_commercialized_agriculture
+		law_homesteading
+		law_state_religion
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_aristocrats_add = 200
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+		}
+	}
+}
+
+pm_church_owned_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+	
+	disallowing_laws = {
+		law_collectivized_agriculture
+		law_homesteading
+		law_commercialized_agriculture
+	}
+	unlocking_laws = {
+		law_state_religion
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_aristocrats_add = 200
+			building_employment_clergymen_add = 200
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add = 1
+		}
+	}
+}
+
+pm_homesteading_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/homesteading.dds" 
+	
+	unlocking_laws = {
+		law_homesteading
+		law_commercialized_agriculture
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_aristocrats_add = 500
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+		}
+	}
+}
+
+pm_worker_cooperative_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_peasants_add = 500
+		}
+		unscaled = {
+			building_workforce_shares_add = 1
+		}
+	}
+}
+
+pm_government_run_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 200
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
